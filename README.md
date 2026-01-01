@@ -14,17 +14,23 @@
 
 ## Table of contents
 
-- [Key features](#key-features)
-- [Donations and sponsors](#donations-and-sponsors)
-- [Setup](#setup)
-- [Docker](#docker)
-- [API](#api)
-- [Configuration](#configuration)
-- [Themes and customizations](#themes-and-customizations)
-- [Browser extensions](#browser-extensions)
-- [Videos](#videos)
-- [Integrations](#integrations)
-- [Contributing](#contributing)
+- [Kutt.it](#kuttit)
+  - [Table of contents](#table-of-contents)
+  - [Key features](#key-features)
+  - [Donations and sponsors](#donations-and-sponsors)
+  - [Setup](#setup)
+  - [Docker](#docker)
+  - [API](#api)
+  - [Configuration](#configuration)
+  - [Themes and customizations](#themes-and-customizations)
+      - [How it works:](#how-it-works)
+      - [Example theme: Crimson](#example-theme-crimson)
+      - [Usage with Docker:](#usage-with-docker)
+  - [Browser extensions](#browser-extensions)
+  - [Videos](#videos)
+  - [Integrations](#integrations)
+  - [Contributing](#contributing)
+      - [Deployment:](#deployment)
 
 ## Key features
 
@@ -243,3 +249,12 @@ Pull requests are welcome. Open a discussion for feedback, requesting features, 
 
 Special thanks to [Thomas](https://github.com/trgwii) and [Muthu](https://github.com/MKRhere). Logo design by [Muthu](https://github.com/MKRhere).
 
+#### Deployment:
+
+Deployment is all manual. We are running a local instance of the github repository on a remote Server.
+
+The app needs to configure a reverse proxy through NGNIX after downloading the repository. 
+
+The instructions for installing the reverse proxy are provided in the following file: https://github.com/stojanov-igor/itlinks/blob/main/ngnix.config
+
+The application is then run using **pm2** Package. More information on managing pm2 you can find here: https://pm2.keymetrics.io/docs/usage/process-management/
